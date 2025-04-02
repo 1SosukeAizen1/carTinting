@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Tinting App - User Management</title>
+</head>
+<body>
+    <h1>Car Tinting App - User Management</h1>
+
+    <h2>Add New User</h2>
+    <form id="userForm">
+        <label for="name">Name: </label>
+        <input type="text" id="name" required><br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" required><br>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password" required><br>
+
+        <label for="role">Role: </label>
+        <select id="role">
+            <option value="admin">Admin</option>
+            <option value="employee">Employee</option>
+            <option value="customer">Customer</option>
+        </select><br>
+
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>Existing Users</h2>
+    <ul id="usersList">
+        <!-- List of users will appear here -->
+    </ul>
+
+    <div id="responseMessage"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
