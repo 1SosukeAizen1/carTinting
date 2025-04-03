@@ -6,9 +6,8 @@ CREATE TABLE User (
     Name VARCHAR(50),
     Email VARCHAR(255) UNIQUE,
     Password VARCHAR(255),
-    Role VARCHAR(30) CHECK (Role IN ('admin', 'employee', 'customer'))
+    Role VARCHAR(50) CHECK (Role IN ('admin', 'employee', 'customer'))
 );
-
 
 CREATE TABLE Client (
     ClientID INT AUTO_INCREMENT PRIMARY KEY,

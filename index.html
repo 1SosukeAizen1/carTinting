@@ -3,38 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Tinting App - User Management</title>
+    <title>Car Tinting - User Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Car Tinting App - User Management</h1>
-
-    <h2>Add New User</h2>
+<div id= "signUpFormContainer">
+    <h2>Sign up</h2>
     <form id="userForm">
-        <label for="name">Name: </label>
+        <label for="name">Name:</label>
         <input type="text" id="name" required><br>
 
-        <label for="email">Email: </label>
+        <label for="email">Email:</label>
         <input type="email" id="email" required><br>
 
-        <label for="password">Password: </label>
+        <label for="password">Password:</label>
         <input type="password" id="password" required><br>
 
-        <label for="role">Role: </label>
-        <select id="role">
+        <label for="role">Role:</label>
+        <select id="role" required>
             <option value="admin">Admin</option>
             <option value="employee">Employee</option>
             <option value="customer">Customer</option>
         </select><br>
 
-        <button type="submit">Add User</button>
+        <button type="submit">Add New User</button>
     </form>
+</div>
 
-    <h2>Existing Users</h2>
-    <ul id="usersList">
-        <!-- List of users will appear here -->
-    </ul>
+ <!-- Login Form -->
+ <div id="loginFormContainer" style="display:none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" required><br>
 
-    <div id="responseMessage"></div>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+<!-- Forget Password Form -->
+<div id="forgetPasswordFormContainer" style="display:none;">
+    <h2>Forgot Password</h2>
+    <form id="forgetPasswordForm">
+        <label for="forgetPasswordEmail">Enter your Email:</label>
+        <input type="email" id="forgetPasswordEmail" required><br>
+
+        <button type="submit">Reset Password</button>
+    </form>
+</div>
+
+    <div id="responseMessage"></div> <!-- To display success or error message -->
+
+    <div id="toggleForms">
+        <button id="showLoginBtn">Already have an account? Login</button>
+        <button id="showSignUpBtn">Don't have an account? Sign Up</button>
+        <button id="showForgetPasswordBtn">Forgot Password?</button>
+    </div>
+
+    <!-- Button to toggle displaying users -->
+    <button id="fetchUsersBtn">Existing Users</button>
+    
+    <!-- User list that will be shown/hidden on button click -->
+    <ul id="userList"></ul>
 
     <script src="script.js"></script>
 </body>
